@@ -3,7 +3,7 @@ async function fetchLiveOrders() {
     if (!ordersList) return;
     
     try {
-        const response = await fetch('https://onrender.com');
+       /api/order/complete
         const orders = await response.json();
         
         ordersList.innerHTML = '';
@@ -53,7 +53,7 @@ async function fetchLiveOrders() {
 // Clears the order when food is collected
 async function completeOrder(id) {
     try {
-        const response = await fetch('https://onrender.com', {
+        /api/order/complete
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: id })
