@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PES CampusBites | Student Ordering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">PES CampusBites</div>
+        <p>Multi-Item Order Portal • Skip the Canteen Queue</p>
+        <a href="admin.html" class="nav-link">Switch to Kitchen Dashboard →</a>
+    </header>
+
+    <main>
+        <section class="form-container" style="max-width: 600px;">
+            <h2>Place Your Multi-Item Order</h2>
+            <form id="orderForm">
+                <div class="input-group">
+                    <label for="studentName">Student Full Name</label>
+                    <input type="text" id="studentName" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="studentUsn">PES USN / Roll Number</label>
+                    <input type="text" id="studentUsn" placeholder="e.g., PES1UG24CS000" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Select Items & Quantities</label>
+                    <!-- JavaScript will dynamically place checkboxes and quantity selectors here -->
+                    <div id="menuSelectorGrid" style="margin-top: 1rem;"></div>
+                </div>
+
+                <!-- Live Total Counter display box -->
+                <div id="liveTotalDisplay" style="font-size: 1.25rem; font-weight: 800; color: #003A70; margin: 1.5rem 0; text-align: right;">
+                    Total Bill: ₹0
+                </div>
+
+                <button type="submit" id="submitBtn">Send Order to Kitchen</button>
+            </form>
+            <div id="statusMessage"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 PES CampusBites Portal • Engineered for Speed</p>
+    </footer>
+
+    <script src="customer.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+/* ==========================================================================
+   PES CampusBites Brand Theme Style Sheet (Official Blue & White)
+   ========================================================================== */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9; /* Platinum light background */
+    color: #001a33; /* Dark text for clean legibility */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #003A70; /* Official PES Royal Blue */
+    color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 58, 112, 0.15);
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.3rem;
+}
+
+header p {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    color: #dbe2e9;
+}
+
+main {
+    flex: 1;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem 1rem;
+    box-sizing: border-box;
+}
+
+.menu-section h2, .form-container h2, .admin-section h2 {
+    color: #003A70;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 3.5rem;
+}
+
+.menu-item {
+    background: #ffffff; /* White Cards */
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.menu-item:hover {
+    transform: translateY(-3px);
+    border-color: #003A70;
+}
+
+.menu-item .emoji {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item h3 {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #002244;
+}
+
+.price {
+    margin: 0;
+    color: #003A70; /* Price tagged in PES Blue */
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+/* Forms layout box */
+.form-container {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    max-width: 440px;
+    margin: 0 auto;
+    border: 1px solid #e2e8f0;
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f8fafc;
+    color: #001a33;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #003A70;
+    background-color: #ffffff;
+}
+
+button {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: #003A70; /* Blue Button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 58, 112, 0.2);
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #002244;
+}
+
+/* Admin Dashboard Specific styles */
+.admin-order-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 6px solid #003A70; /* Distinctive blue left accent stripe */
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.order-id {
+    display: block;
+    font-weight: bold;
+    color: #64748b;
+    margin-bottom: 0.25rem;
+}
+
+.complete-btn {
+    max-width: 160px;
+    background-color: #1e293b;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+}
+
+.complete-btn:hover {
+    background-color: #0f172a;
+}
+
+#statusMessage {
+    margin-top: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 6px;
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #002244;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 4rem;
+}
