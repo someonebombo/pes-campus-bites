@@ -130,7 +130,7 @@ document.getElementById('orderForm').addEventListener('submit', async (event) =>
     submitBtn.textContent = 'Processing Order...';
 
     try {
-        const response = await fetch('https://onrender.com', {
+        const response = await fetch('http://localhost:5000/api/order', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ studentName, studentUsn, basket: selectedMeals, totalCost: orderTotalCost })
