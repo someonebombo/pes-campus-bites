@@ -122,7 +122,7 @@ document.getElementById('orderForm').addEventListener('submit', async (event) =>
         statusMessage.style.backgroundColor = '#fde8e8';
         statusMessage.style.color = '#9b1c1c';
         statusMessage.textContent = 'Please select at least 1 item before ordering.';
-        statusMessage.style.display = 'block';
+       statusMessage.style.display = 'block';
         return;
     }
 
@@ -130,9 +130,11 @@ document.getElementById('orderForm').addEventListener('submit', async (event) =>
     submitBtn.textContent = 'Processing Order...';
 
     try {
+        // Updated URL to target your unique Render backend service route
         const response = await fetch('https://onrender.com', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
+
             body: JSON.stringify({ studentName, studentUsn, basket: selectedMeals, totalCost: orderTotalCost })
         });
 
