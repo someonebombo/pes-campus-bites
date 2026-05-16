@@ -8,7 +8,7 @@ const canteenItems = [
     { id: 4, name: "Patal Bhaji Pav", price: 30, emoji: "🍲" },
     { id: 5, name: "Mix Kurma Pav", price: 40, emoji: "🥣" },
     { id: 6, name: "Ros Omelette Pav", price: 60, emoji: "🍳" },
-     { id: 3, name: "kurma Pav Bhaji", price: 40, emoji: "🍛" },
+    { id: 3, name: "kurma Pav Bhaji", price: 40, emoji: "🍛" },
 
     // 🍚 Category: Mains & Rice Dishes
     { id: 7, name: "Chicken Biryani", price: 150, emoji: "🍗" },
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     selectorGrid.innerHTML = '';
 
-    // Automatically build interactive list rows on your webpage
     canteenItems.forEach(item => {
         const row = document.createElement("div");
         row.style.display = "flex";
@@ -67,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
         selectorGrid.appendChild(row);
     });
 
-    // Watch for when quantities or checkboxes change states
     selectorGrid.addEventListener("change", (e) => {
         if (e.target.classList.contains("food-checkbox")) {
             const qtySelect = e.target.closest("div").nextElementSibling;
@@ -78,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Live price calculator engine
 function calculateLiveTotal() {
     let total = 0;
     const checkboxes = document.querySelectorAll(".food-checkbox");
@@ -94,7 +91,6 @@ function calculateLiveTotal() {
     document.getElementById("liveTotalDisplay").textContent = `Total Bill: ₹${total}`;
 }
 
-// Order dispatcher network bundle
 document.getElementById('orderForm').addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -130,6 +126,7 @@ document.getElementById('orderForm').addEventListener('submit', async (event) =>
     submitBtn.textContent = 'Processing Order...';
 
     try {
+        // 🎯 FIXED TRACKING PATH ROUTING STRING AT LINE 121
         const response = await fetch('https://onrender.com', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
